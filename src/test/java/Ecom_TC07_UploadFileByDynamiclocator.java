@@ -35,7 +35,7 @@ public class Ecom_TC07_UploadFileByDynamiclocator extends BaseTest {
 
         homePage = loginPage.clickToLoginButton();
 
-        verifyEquals(homePage.loginSuccessTitle(), "Logged in as phat.truong@merc1atus.com");
+        verifyEquals(homePage.loginSuccessTitle(), "Logged in as phat.truong@mercatus.com");
 
         homePage.clickToContactUsLink();
 

@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.Reporter;
+import org.testng.annotations.BeforeSuite;
 
 import java.io.File;
 import java.time.Duration;
@@ -152,6 +153,12 @@ public class BaseTest {
             System.out.print(e.getMessage());
         }
     }
+    @BeforeSuite
+    public void deleteReportFolder() {
+        deleteAllFileInFolder("htmlReportNG");
+        deleteAllFileInFolder("allure-results");
+    }
+
 }
 
 
