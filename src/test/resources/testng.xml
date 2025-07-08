@@ -15,23 +15,13 @@
     <test name="Run on Chrome Browser">
         <parameter name="Browser" value="Chrome"></parameter>
         <classes>
-            <class name="Ecom_TC07_UploadFileByDynamiclocator"/>
-            <class name="Ecom_TC06_SwitchPageByDynamicLocator"/>
-            <class name="Ecom_TC05_SwitchSite"/>
-            <class name="Ecom_TC04_SwitchProductPage"/>
+            <class name="Ecom_TC09_VerifySeachProduct"/>
+            <class name="Ecom_TC10_VerifySubscriptionInHomePage"/>
+
         </classes>
     </test>
 
-    <!-- Test chạy trên Firefox -->
-<!--    <test name="Run on Firefox Browser">-->
-<!--        <parameter name="Browser" value="Firefox"></parameter>-->
-<!--        <classes>-->
-<!--            <class name="Ecom_TC07_UploadFileByDynamiclocator"/>-->
-<!--            <class name="Ecom_TC06_SwitchPageByDynamicLocator"/>-->
-<!--            <class name="Ecom_TC05_SwitchSite"/>-->
-<!--            <class name="Ecom_TC04_SwitchProductPage"/>-->
-<!--        </classes>-->
-<!--    </test>-->
+
 
 </suite>
 

@@ -8,21 +8,19 @@ import org.openqa.selenium.WebDriver;
 
 
 public class LoginPageObject extends BasePage {
-    String UserName = "phat.truong@mercatus.com";
-    String Password = "Abcd1234";
 
     public LoginPageObject(WebDriver driver) {
         super(driver);
     }
 
     @Step("Input UserName textbox with value: {0}")
-    public void inputUserNameTextBox() {
+    public void inputUserNameTextBox(String UserName) {
         waitForElementVisible(LoginPageUi.USER_NAME_TEXTBOX);
         sendkeyToElement(LoginPageUi.USER_NAME_TEXTBOX, UserName);
     }
 
     @Step("Input Password textbox with value: {0}")
-    public void inptuPassWordTextBox() {
+    public void inptuPassWordTextBox(String Password) {
         waitForElementVisible(LoginPageUi.PASSWORD_TEXTBOX);
         sendkeyToElement(LoginPageUi.PASSWORD_TEXTBOX, Password);
     }

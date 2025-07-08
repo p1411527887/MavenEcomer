@@ -1,5 +1,6 @@
 import PageObject.*;
 import commons.BaseTest;
+import commons.GlobalConstants;
 import commons.PageGenerator;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
@@ -34,8 +35,8 @@ public class Ecom_TC06_SwitchPageByDynamicLocator extends BaseTest {
     @Test
     public void TC_TC06_SwitchPageByDynamicLocator() {
         loginPage = PageGenerator.getLoginPage(driver);
-        loginPage.inputUserNameTextBox();
-        loginPage.inptuPassWordTextBox();
+        loginPage.inputUserNameTextBox(GlobalConstants.USERNAME);
+        loginPage.inptuPassWordTextBox(GlobalConstants.USERNAME);
         homePage = loginPage.clickToLoginButton();
         Assert.assertEquals(homePage.loginSuccessTitle(), "Logged in as phat.truong@mercatus.com");
         productPage = homePage.clickToProductLink();

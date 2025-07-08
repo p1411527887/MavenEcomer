@@ -1,7 +1,8 @@
 package PageObject;
 
-import PageUI.AllProductPageUi;
+import PageUI.ProductPageUi;
 import commons.BasePage;
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 
 public class ProductPageObject extends BasePage {
@@ -10,56 +11,92 @@ public class ProductPageObject extends BasePage {
         super(driver);
     }
 
+    @Step("Verify Polo brand page title ")
     public String getTextPoloBrands() {
-        waitForElementVisible(AllProductPageUi.BRANDS_POLO_LINK);
-        return getTextElement(AllProductPageUi.BRANDS_POLO_LINK).replaceAll("\\(\\d+\\)\\s*", "").trim();
-
-
+        waitForElementVisible(ProductPageUi.BRANDS_POLO_LINK);
+        return getTextElement(ProductPageUi.BRANDS_POLO_LINK).replaceAll("\\(\\d+\\)\\s*", "").trim();
     }
 
+    @Step("Verify H and M brand page title ")
     public String getTextHAndMBrands() {
-        waitForElementVisible(AllProductPageUi.BRANDS_H_AND_M_LINK);
-        return getTextElement(AllProductPageUi.BRANDS_H_AND_M_LINK).replaceAll("\\(\\d+\\)\\s*", "").trim();
+        waitForElementVisible(ProductPageUi.BRANDS_H_AND_M_LINK);
+        return getTextElement(ProductPageUi.BRANDS_H_AND_M_LINK).replaceAll("\\(\\d+\\)\\s*", "").trim();
     }
 
+    @Step("Verify Madame brand page title ")
     public String getTextMadameBrands() {
-        waitForElementVisible(AllProductPageUi.BRANDS_MADAME_LINK);
-        return getTextElement(AllProductPageUi.BRANDS_MADAME_LINK).replaceAll("\\(\\d+\\)\\s*", "").trim();
+        waitForElementVisible(ProductPageUi.BRANDS_MADAME_LINK);
+        return getTextElement(ProductPageUi.BRANDS_MADAME_LINK).replaceAll("\\(\\d+\\)\\s*", "").trim();
     }
 
+    @Step("Verify Mast and Habour brand page title ")
     public String getTextMastAndHabourBrands() {
-        waitForElementVisible(AllProductPageUi.BRANDS_MAST_AND_HARBOUR_LINK);
-        return getTextElement(AllProductPageUi.BRANDS_MAST_AND_HARBOUR_LINK).replaceAll("\\(\\d+\\)\\s*", "").trim();
+        waitForElementVisible(ProductPageUi.BRANDS_MAST_AND_HARBOUR_LINK);
+        return getTextElement(ProductPageUi.BRANDS_MAST_AND_HARBOUR_LINK).replaceAll("\\(\\d+\\)\\s*", "").trim();
     }
 
+    @Step("Verify BabyHub brand page title ")
     public String getTextBabyHubBrands() {
-        waitForElementVisible(AllProductPageUi.BRANDS_BABY_HUG_LINK);
-        return getTextElement(AllProductPageUi.BRANDS_BABY_HUG_LINK).replaceAll("\\(\\d+\\)\\s*", "").trim();
+        waitForElementVisible(ProductPageUi.BRANDS_BABY_HUG_LINK);
+        return getTextElement(ProductPageUi.BRANDS_BABY_HUG_LINK).replaceAll("\\(\\d+\\)\\s*", "").trim();
     }
 
+    @Step("Verify Allen Solly Junior brand page title ")
     public String getTextAllenSollyJuniorBrands() {
-        waitForElementVisible(AllProductPageUi.BRANDS_ALLEN_SOLLY_JUNIOR_LINK);
-        return getTextElement(AllProductPageUi.BRANDS_ALLEN_SOLLY_JUNIOR_LINK).replaceAll("\\(\\d+\\)\\s*", "").trim();
+        waitForElementVisible(ProductPageUi.BRANDS_ALLEN_SOLLY_JUNIOR_LINK);
+        return getTextElement(ProductPageUi.BRANDS_ALLEN_SOLLY_JUNIOR_LINK).replaceAll("\\(\\d+\\)\\s*", "").trim();
     }
 
+    @Step("Verify KooKie brand page title ")
     public String getTextKooKieBrands() {
-        waitForElementVisible(AllProductPageUi.BRANDS_KOOKIE_KID_LINK);
-        return getTextElement(AllProductPageUi.BRANDS_KOOKIE_KID_LINK).replaceAll("\\(\\d+\\)\\s*", "").trim();
+        waitForElementVisible(ProductPageUi.BRANDS_KOOKIE_KID_LINK);
+        return getTextElement(ProductPageUi.BRANDS_KOOKIE_KID_LINK).replaceAll("\\(\\d+\\)\\s*", "").trim();
     }
 
+    @Step("Verify Biba brand page title ")
     public String getTextBiBaBrands() {
-        waitForElementVisible(AllProductPageUi.BRANDS_BIBA_LINK);
-        return getTextElement(AllProductPageUi.BRANDS_BIBA_LINK).replaceAll("\\(\\d+\\)\\s*", "").trim();
+        waitForElementVisible(ProductPageUi.BRANDS_BIBA_LINK);
+        return getTextElement(ProductPageUi.BRANDS_BIBA_LINK).replaceAll("\\(\\d+\\)\\s*", "").trim();
     }
-
+    @Step("Scroll down to Mast and Harbour brand")
     public void scrollDownToBrand() {
-        waitForElementVisible(AllProductPageUi.BRANDS_MAST_AND_HARBOUR_LINK);
-        scrollToElementOnDownByJS(AllProductPageUi.BRANDS_MAST_AND_HARBOUR_LINK);
+        waitForElementVisible(ProductPageUi.BRANDS_MAST_AND_HARBOUR_LINK);
+        scrollToElementOnDownByJS(ProductPageUi.BRANDS_MAST_AND_HARBOUR_LINK);
     }
 
+    @Step("view product of blue top item")
     public void clickOnViewProductOfBlueTopItem() {
-        waitForElementClickable(AllProductPageUi.VIEW_PRODUCT_BLUE_TOP_LINK);
-        clickToElementByJS(AllProductPageUi.VIEW_PRODUCT_BLUE_TOP_LINK);
+        waitForElementClickable(ProductPageUi.VIEW_PRODUCT_BLUE_TOP_LINK);
+        clickToElementByJS(ProductPageUi.VIEW_PRODUCT_BLUE_TOP_LINK);
     }
 
+    @Step("input product name to seach product field with value: {0}")
+    public void inputProductNameToSeachProductField(String producName) {
+        waitForElementVisible(ProductPageUi.SEACH_PRODUCT_TEXTBOX);
+        sendkeyToElement(ProductPageUi.SEACH_PRODUCT_TEXTBOX,producName);
+    }
+
+    @Step("Verify all product title")
+    public boolean allProductsTitleIsDisplayed() {
+        waitForElementVisible(ProductPageUi.ALL_PRODUCT_TITLE);
+        return isElementDisplayed(ProductPageUi.ALL_PRODUCT_TITLE);
+    }
+
+    @Step("Verify Men T Shirt Item title")
+    public boolean menTshirtItemIsDisplayed() {
+        waitForElementVisible(ProductPageUi.MEN_TSHIRT_ITEM);
+        return isElementDisplayed(ProductPageUi.MEN_TSHIRT_ITEM);
+    }
+
+    @Step("Verify Medame top for women Item title")
+    public boolean madameTopForWomenIsDisplayed() {
+        waitForElementVisible(ProductPageUi.MADAME_TOP_FOR_WOMEN_ITEM);
+        return  isElementDisplayed(ProductPageUi.MADAME_TOP_FOR_WOMEN_ITEM);
+    }
+
+    @Step("Verify Lace top for women Item title")
+    public boolean laceTopForWomenIsDisPlayed() {
+        waitForElementVisible(ProductPageUi.LACE_TOP_FOR_WOMEN_ITEM);
+        return isElementDisplayed(ProductPageUi.LACE_TOP_FOR_WOMEN_ITEM);
+    }
 }

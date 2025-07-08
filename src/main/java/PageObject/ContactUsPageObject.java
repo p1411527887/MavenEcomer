@@ -9,39 +9,32 @@ import org.openqa.selenium.WebDriver;
 import java.io.File;
 
 public class ContactUsPageObject extends BasePage {
-    private String Name = "Phat";
-    private String Email = "Phat.truong@mercatus.com";
-    private String Subject = "QA automation";
-    private String YourMassageHere = " become QA automation as soon as possible";
-    private String upLoadFolderPath = System.getProperty("user.dir") + File.separator + "uploadFile" + File.separator;
-    private String Hinh1 = "hinh1.jpg";
-    private String Hinh1Path = upLoadFolderPath + Hinh1;
 
     public ContactUsPageObject(WebDriver driver) {
         super(driver);
     }
 
     @Step("Input Name textbox with value: {0}")
-    public void inputNameTextBox() {
+    public void inputNameTextBox(String Name) {
         waitForElementVisible(ContactUsPageUi.NAME_TEXTBOX);
         sendkeyToElement(ContactUsPageUi.NAME_TEXTBOX, Name);
     }
 
 
     @Step("Input Email textbox with value: {0}")
-    public void inputEmailTextBox() {
+    public void inputEmailTextBox(String Email) {
         waitForElementVisible(ContactUsPageUi.EMAIL_TEXTBOX);
         sendkeyToElement(ContactUsPageUi.EMAIL_TEXTBOX, Email);
     }
 
     @Step("Input Subject textbox with value: {0}")
-    public void inputSubjectTextBox() {
+    public void inputSubjectTextBox(String Subject) {
         waitForElementVisible(ContactUsPageUi.SUBJECT_TEXTBOX);
         sendkeyToElement(ContactUsPageUi.SUBJECT_TEXTBOX, Subject);
     }
 
     @Step("Upload file")
-    public void uploadFile() {
+    public void uploadFile(String Hinh1Path) {
         waitForElementVisible(ContactUsPageUi.UPLOAD_FILE_BUTTON);
         sendkeyToElement(ContactUsPageUi.UPLOAD_FILE_BUTTON, Hinh1Path);
 
@@ -76,7 +69,7 @@ public class ContactUsPageObject extends BasePage {
     }
 
     @Step("Input Your Message Here textbox with value: {0}")
-    public void inputYourMessageHereTextBox() {
+    public void inputYourMessageHereTextBox(String YourMassageHere) {
         waitForElementVisible(ContactUsPageUi.YOUR_MESSAGE_HERE_TEXTBOX);
         sendkeyToElement(ContactUsPageUi.YOUR_MESSAGE_HERE_TEXTBOX, YourMassageHere);
     }

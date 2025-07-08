@@ -1,6 +1,7 @@
 import PageObject.ContactUsPageObject;
 import PageObject.HomePageObject;
 import PageObject.LoginPageObject;
+import PageObject.ProductPageObject;
 import commons.BaseTest;
 import commons.GlobalConstants;
 import commons.PageGenerator;
@@ -11,12 +12,13 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 
-public class Ecom_TC07_UploadFileByDynamiclocator extends BaseTest {
+public class Ecom_TC09_VerifySeachProduct extends BaseTest {
 
     private WebDriver driver;
     private LoginPageObject loginPage;
     private HomePageObject homePage;
     private ContactUsPageObject contactUsPage;
+    private ProductPageObject productPage;
 
 
     @Parameters("Browser")
@@ -26,8 +28,7 @@ public class Ecom_TC07_UploadFileByDynamiclocator extends BaseTest {
     }
 
     @Test
-    public void TC_02_VerifyContactUsPage() {
-
+    public void TC_01_VerifySeachProduct() {
         loginPage = PageGenerator.getLoginPage(driver);
 
         loginPage.inputUserNameTextBox(GlobalConstants.USERNAME);
@@ -38,28 +39,21 @@ public class Ecom_TC07_UploadFileByDynamiclocator extends BaseTest {
 
         verifyEquals(homePage.loginSuccessTitle(), "Logged in as phat.truong@mercatus.com");
 
-        homePage.clickToContactUsLink();
+        productPage = homePage.clickToProductLink();
+        verifyTrue(productPage.allProductsTitleIsDisplayed());
+        productPage.inputProductNameToSeachProductField("Men");
+        verifyTrue(productPage.menTshirtItemIsDisplayed());
+        verifyTrue(productPage.madameTopForWomenIsDisplayed());
+        verifyTrue(productPage.laceTopForWomenIsDisPlayed());
 
-        contactUsPage = homePage.clickToContactUsLink();
 
-        contactUsPage.inputNameTextBox(GlobalConstants.NAME);
 
-        contactUsPage.inputEmailTextBox(GlobalConstants.EMAIL);
 
-        contactUsPage.inputSubjectTextBox(GlobalConstants.SUBJECT);
 
-        contactUsPage.inputYourMessageHereTextBox(GlobalConstants.YOUR_MESSAGE_HERE);
 
-        contactUsPage.uploadFile(GlobalConstants.HINH1_PICTURE);
-        sleepInSecond(1);
 
-        contactUsPage.clickToSubmitButton();
 
-        contactUsPage.clickOkToAlert();
 
-        verifyEquals(contactUsPage.submitSuccessfullyMessage(), "Success! Your details have been submitted successfully.");
-
-        contactUsPage.clickToBackToHomeButton();
 
 
 

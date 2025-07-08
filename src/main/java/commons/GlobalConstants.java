@@ -1,5 +1,7 @@
 package commons;
 
+import java.io.File;
+
 public class GlobalConstants {
     // System Info - Lấy thông tin hệ thống
     public static final String PROJECT_PATH = System.getProperty("user.dir");
@@ -7,8 +9,12 @@ public class GlobalConstants {
     public static final String SEPARATOR = System.getProperty("file.separator");
 
     // Admin Info - Thông tin đăng nhập admin
-    public static final String ADMIN_USERNAME = "admin";
-    public static final String ADMIN_PASSWORD = "guru99com";
+    public static final String USERNAME = "phat.truong@mercatus.com";
+    public static final String PASSWORD = "Abcd1234";
+    public static final String NAME = "Phat";
+    public static final String EMAIL = "Phat.truong@mercatus.com";
+    public static final String SUBJECT = "QA automation";
+    public static final String YOUR_MESSAGE_HERE = "become QA automation as soon as possible";
 
     // Wait Info - Thời gian chờ
     public static final long SHORT_TIMEOUT = 10;
@@ -18,6 +24,8 @@ public class GlobalConstants {
     // Download/Upload file - Đường dẫn file
     public static final String UPLOAD_PATH = PROJECT_PATH + SEPARATOR + "uploadFiles" + SEPARATOR;
     public static final String DOWNLOAD_PATH = PROJECT_PATH + SEPARATOR + "downloadFiles" + SEPARATOR;
+    public static final String HINH1 = "hinh1.jpg";
+    public static final String HINH1_PICTURE = UPLOAD_PATH + HINH1;
 
     // Retry Case Failed - Số lần thử lại khi test fail
     public static final int RETRY_NUMBER = 3;
@@ -46,4 +54,7 @@ public class GlobalConstants {
     public static final String DEV_ENVIRONMENT = "dev";
     public static final String STAGING_ENVIRONMENT = "staging";
     public static final String PRODUCTION_ENVIRONMENT = "production";
+
+    //Upload picture
+
 }
