@@ -21,14 +21,14 @@ public class HomePageObject extends BasePage {
     public ContactUsPageObject clickToContactUsLink() {
         waitForElementClickable(HomePageUi.CONTACT_US_LINK);
         clickToElement(HomePageUi.CONTACT_US_LINK);
-        return PageGenerator.contactUsPage(driver);
+        return PageGenerator.openContactUsPage(driver);
     }
 
     @Step("Click to Product Link")
     public ProductPageObject clickToProductLink() {
         waitForElementClickable(HomePageUi.PRODUCT_LINK);
         clickToElement(HomePageUi.PRODUCT_LINK);
-        return PageGenerator.getProductPage(driver);
+        return PageGenerator.openProductPage(driver);
     }
 
     @Step("Scroll down to footer")

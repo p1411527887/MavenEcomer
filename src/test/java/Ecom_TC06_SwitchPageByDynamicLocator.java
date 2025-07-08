@@ -34,7 +34,7 @@ public class Ecom_TC06_SwitchPageByDynamicLocator extends BaseTest {
 
     @Test
     public void TC_TC06_SwitchPageByDynamicLocator() {
-        loginPage = PageGenerator.getLoginPage(driver);
+        loginPage = PageGenerator.openLoginPage(driver);
         loginPage.inputUserNameTextBox(GlobalConstants.USERNAME);
         loginPage.inptuPassWordTextBox(GlobalConstants.USERNAME);
         homePage = loginPage.clickToLoginButton();
@@ -46,16 +46,16 @@ public class Ecom_TC06_SwitchPageByDynamicLocator extends BaseTest {
         brandOfProductPage = PageGenerator.getPoloBrandPage(driver);
 
         brandOfProductPage.getBrandPageByDynamicLocator("H&M");
-        brandOfProductPage = PageGenerator.getHAndMBrandPage(driver);
+        brandOfProductPage = PageGenerator.openHAndMBrandPage(driver);
 
         brandOfProductPage.getBrandPageByDynamicLocator("Madame");
-        brandOfProductPage = PageGenerator.getMadameBrandPage(driver);
+        brandOfProductPage = PageGenerator.openMadameBrandPage(driver);
 
         brandOfProductPage.getBrandPageByDynamicLocator("Mast & Harbour");
-        brandOfProductPage = PageGenerator.getMastAndHarbourBrandPage(driver);
+        brandOfProductPage = PageGenerator.openMastAndHarbourBrandPage(driver);
 
         brandOfProductPage.getBrandPageByDynamicLocator("Babyhug");
-        brandOfProductPage = PageGenerator.getBabyHugBrandPage(driver);
+        brandOfProductPage = PageGenerator.openBabyHugBrandPage(driver);
 
         brandOfProductPage.getBrandPageByDynamicLocator("Allen Solly Junior");
         brandOfProductPage = PageGenerator.getAllenSollyJuniorBrandPage(driver);

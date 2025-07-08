@@ -6,8 +6,6 @@ import commons.PageGenerator;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 
-import java.io.File;
-
 public class ContactUsPageObject extends BasePage {
 
     public ContactUsPageObject(WebDriver driver) {
@@ -65,7 +63,7 @@ public class ContactUsPageObject extends BasePage {
     public HomePageObject clickToBackToHomeButton() {
         waitForElementClickable(ContactUsPageUi.BACK_TO_HOME_BUTTON);
         clickToElement(ContactUsPageUi.BACK_TO_HOME_BUTTON);
-        return PageGenerator.getHomePage(driver);
+        return PageGenerator.openHomePage(driver);
     }
 
     @Step("Input Your Message Here textbox with value: {0}")

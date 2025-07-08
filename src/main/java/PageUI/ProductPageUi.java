@@ -17,4 +17,10 @@ public class ProductPageUi {
     public static final String MADAME_TOP_FOR_WOMEN_ITEM = "//div[@class='single-products']/div[@class='productinfo text-center']/p[text()='Madame Top For Women']";
     public static final String LACE_TOP_FOR_WOMEN_ITEM = "//div[@class='single-products']/div[@class='productinfo text-center']/p[text()='Lace Top For Women']";
     public static final String GRAPHIC_DESIGN_MEN_TSHIRT_BLUE = "//div[@class='single-products']/div[@class='productinfo text-center']/p[text()='GRAPHIC DESIGN MEN T SHIRT - BLUE']";
+    public static final String BLUE_TOP_ITEM = "//p[text()='Blue Top']/parent::div[@class='productinfo text-center']";
+    public static final String BLUE_TOP_ADD_TO_CART_BUTTON = "//p[text()='Blue Top']/parent::div[@class='productinfo text-center']/a";
+    public static final String CONTINUE_SHOPING_BUTTON = "//button[text()='Continue Shopping']";
+    public static final String SLEEVELESS_DRESS_ITEM = "//p[text()='Sleeveless Dress']/parent::div[@class='productinfo text-center']";
+    public static final String SLEEVELESS_DRESS_ADD_TO_CART_BUTTON = "//p[text()='Sleeveless Dress']/parent::div[@class='productinfo text-center']/a";
+    public static final String VIEW_CART_BUTTON = "//a/u[text()='View Cart']";
 }

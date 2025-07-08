@@ -2,6 +2,7 @@ package PageObject;
 
 import PageUI.ProductPageUi;
 import commons.BasePage;
+import commons.PageGenerator;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 
@@ -98,5 +99,39 @@ public class ProductPageObject extends BasePage {
     public boolean laceTopForWomenIsDisPlayed() {
         waitForElementVisible(ProductPageUi.LACE_TOP_FOR_WOMEN_ITEM);
         return isElementDisplayed(ProductPageUi.LACE_TOP_FOR_WOMEN_ITEM);
+    }
+
+    public void hoverToBlueTopItem() {
+        waitForElementVisible(ProductPageUi.BLUE_TOP_ITEM);
+        hoverToElement(ProductPageUi.BLUE_TOP_ITEM);
+    }
+
+    public void clickOnBlueTopAddToCartButton() {
+        waitForElementClickable(ProductPageUi.BLUE_TOP_ADD_TO_CART_BUTTON);
+        clickToElement(ProductPageUi.BLUE_TOP_ADD_TO_CART_BUTTON);
+    }
+
+
+    public void clickOnContinueShopingButton() {
+        waitForElementClickable(ProductPageUi.CONTINUE_SHOPING_BUTTON);
+        clickToElement(ProductPageUi.CONTINUE_SHOPING_BUTTON);
+    }
+
+
+    public void hoverToSleevelessDressItem() {
+        waitForElementVisible(ProductPageUi.SLEEVELESS_DRESS_ITEM);
+        hoverToElement(ProductPageUi.SLEEVELESS_DRESS_ITEM);
+    }
+
+    public void clickOnSleevelessDressAddToCartButton() {
+        waitForElementClickable(ProductPageUi.SLEEVELESS_DRESS_ADD_TO_CART_BUTTON);
+        clickToElement(ProductPageUi.SLEEVELESS_DRESS_ADD_TO_CART_BUTTON);
+    }
+
+
+    public ShoppingCartPageObject clickOnViewCartLink() {
+        waitForElementClickable(ProductPageUi.VIEW_CART_BUTTON);
+        clickToElement(ProductPageUi.VIEW_CART_BUTTON);
+        return  PageGenerator.openShoppingCartPage(driver);
     }
 }

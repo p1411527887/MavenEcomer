@@ -29,7 +29,7 @@ public class Ecom_TC10_VerifySubscriptionInHomePage extends BaseTest {
 
     @Test
     public void TC_01_VerifySeachProduct() {
-        loginPage = PageGenerator.getLoginPage(driver);
+        loginPage = PageGenerator.openLoginPage(driver);
         loginPage.inputUserNameTextBox(GlobalConstants.USERNAME);
         loginPage.inptuPassWordTextBox(GlobalConstants.PASSWORD);
         homePage = loginPage.clickToLoginButton();

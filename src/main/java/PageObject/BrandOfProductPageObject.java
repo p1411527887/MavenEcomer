@@ -19,27 +19,27 @@ public class BrandOfProductPageObject extends ProductPageObject {
     public HAndMBrandPageObject getHAndMBrandPage() {
         waitForElementClickable(BrandOfProductPageUi.BRANDS_H_AND_M_LINK);
         clickToElement(BrandOfProductPageUi.BRANDS_H_AND_M_LINK);
-        return PageGenerator.getHAndMBrandPage(driver);
+        return PageGenerator.openHAndMBrandPage(driver);
 
     }
 
     public MadameBrandPageObject getMadameBrandPage() {
         waitForElementClickable(BrandOfProductPageUi.BRANDS_MADAME_LINK);
         clickToElement(BrandOfProductPageUi.BRANDS_MADAME_LINK);
-        return PageGenerator.getMadameBrandPage(driver);
+        return PageGenerator.openMadameBrandPage(driver);
 
     }
 
     public MastAndHarbourBrandPageObject getMastAndHarbourBrandPage() {
         waitForElementClickable(BrandOfProductPageUi.BRANDS_MAST_AND_HARBOUR_LINK);
         clickToElement(BrandOfProductPageUi.BRANDS_MAST_AND_HARBOUR_LINK);
-        return PageGenerator.getMastAndHarbourBrandPage(driver);
+        return PageGenerator.openMastAndHarbourBrandPage(driver);
     }
 
     public BabyHugBrandPageObject getBabyHugBrandPage() {
         waitForElementClickable(BrandOfProductPageUi.BRANDS_BABY_HUG_LINK);
         clickToElement(BrandOfProductPageUi.BRANDS_BABY_HUG_LINK);
-        return PageGenerator.getBabyHugBrandPage(driver);
+        return PageGenerator.openBabyHugBrandPage(driver);
     }
 
     public AllenSollyJuniorBrandPageObject getAllenSollyJuniorBrandPage() {
@@ -67,13 +67,13 @@ public class BrandOfProductPageObject extends ProductPageObject {
             case "Polo":
                 return PageGenerator.getPoloBrandPage(driver);
             case "H&M":
-                return PageGenerator.getHAndMBrandPage(driver);
+                return PageGenerator.openHAndMBrandPage(driver);
             case "Madame":
-                return PageGenerator.getMadameBrandPage(driver);
+                return PageGenerator.openMadameBrandPage(driver);
             case "Mast & Harbour":
-                return PageGenerator.getMastAndHarbourBrandPage(driver);
+                return PageGenerator.openMastAndHarbourBrandPage(driver);
             case "Babyhug":
-                return PageGenerator.getBabyHugBrandPage(driver);
+                return PageGenerator.openBabyHugBrandPage(driver);
             case "Allen Solly Junior":
                 return PageGenerator.getAllenSollyJuniorBrandPage(driver);
             case "Kookie Kids":

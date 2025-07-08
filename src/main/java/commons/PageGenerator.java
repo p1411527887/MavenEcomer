@@ -4,35 +4,35 @@ import PageObject.*;
 import org.openqa.selenium.WebDriver;
 
 public class PageGenerator {
-    public static HomePageObject getHomePage(WebDriver driver) {
+    public static HomePageObject openHomePage(WebDriver driver) {
         return new HomePageObject(driver);
     }
 
-    public static ContactUsPageObject contactUsPage(WebDriver driver) {
+    public static ContactUsPageObject openContactUsPage(WebDriver driver) {
         return new ContactUsPageObject(driver);
     }
 
-    public static LoginPageObject getLoginPage(WebDriver driver) {
+    public static LoginPageObject openLoginPage(WebDriver driver) {
         return new LoginPageObject(driver);
     }
 
-    public static ProductPageObject getProductPage(WebDriver driver) {
+    public static ProductPageObject openProductPage(WebDriver driver) {
         return new ProductPageObject(driver);
     }
 
-    public static HAndMBrandPageObject getHAndMBrandPage(WebDriver driver) {
+    public static HAndMBrandPageObject openHAndMBrandPage(WebDriver driver) {
         return new HAndMBrandPageObject(driver);
     }
 
-    public static MadameBrandPageObject getMadameBrandPage(WebDriver driver) {
+    public static MadameBrandPageObject openMadameBrandPage(WebDriver driver) {
         return new MadameBrandPageObject(driver);
     }
 
-    public static MastAndHarbourBrandPageObject getMastAndHarbourBrandPage(WebDriver driver) {
+    public static MastAndHarbourBrandPageObject openMastAndHarbourBrandPage(WebDriver driver) {
         return new MastAndHarbourBrandPageObject(driver);
     }
 
-    public static BabyHugBrandPageObject getBabyHugBrandPage(WebDriver driver) {
+    public static BabyHugBrandPageObject openBabyHugBrandPage(WebDriver driver) {
         return new BabyHugBrandPageObject(driver);
     }
 
@@ -56,5 +56,8 @@ public class PageGenerator {
         return new BrandOfProductPageObject(driver);
     }
 
+    public static ShoppingCartPageObject openShoppingCartPage(WebDriver driver) {
+        return new ShoppingCartPageObject(driver);
+    }
 
 }
