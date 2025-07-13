@@ -66,9 +66,8 @@ public class Ecom_TC06_SwitchPageByDynamicLocator extends BaseTest {
     }
 
 
-    @AfterClass
+    @AfterClass(alwaysRun = true)
     public void CloseWindow() {
-        closeWindow();
-
+        closeBrowserDriver();
     }
 }

@@ -17,7 +17,7 @@ public class GlobalConstants {
     public static final String YOUR_MESSAGE_HERE = "become QA automation as soon as possible";
 
     // Wait Info - Thời gian chờ
-    public static final long SHORT_TIMEOUT = 10;
+    public static final long SHORT_TIMEOUT = 5;
     public static final long LONG_TIMEOUT = 30;
     public static final long POLLING_TIMEOUT = 500; // milliseconds
 

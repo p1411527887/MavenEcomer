@@ -59,9 +59,8 @@ public class Ecom_TC10_VerifySubscriptionInHomePage extends BaseTest {
     }
 
 
-    @AfterClass
+    @AfterClass(alwaysRun = true)
     public void CloseWindow() {
-        driver.quit();
-
+        closeBrowserDriver();
     }
 }

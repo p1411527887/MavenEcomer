@@ -53,9 +53,8 @@ public class Ecom_TC11_AddProductInCart extends BaseTest {
     }
 
 
-    @AfterClass
+    @AfterClass(alwaysRun = true)
     public void CloseWindow() {
-        driver.quit();
-
+        closeBrowserDriver();
     }
 }
