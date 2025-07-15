@@ -60,9 +60,8 @@ public class Ecom_TC09_VerifySeachProduct extends BaseTest {
     }
 
 
-    @AfterClass
+    @AfterClass(alwaysRun = true)
     public void CloseWindow() {
-        driver.quit();
-
+        closeBrowserDriver();
     }
 }

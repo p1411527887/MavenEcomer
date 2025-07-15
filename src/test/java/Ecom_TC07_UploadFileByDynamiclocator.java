@@ -66,9 +66,8 @@ public class Ecom_TC07_UploadFileByDynamiclocator extends BaseTest {
     }
 
 
-    @AfterClass
+    @AfterClass(alwaysRun = true)
     public void CloseWindow() {
-        driver.quit();
-
+        closeBrowserDriver();
     }
 }

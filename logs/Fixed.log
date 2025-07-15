@@ -100,3 +100,11 @@
 [07-07-2025 16:33:50.883 INFO Ecom_TC07_UploadFileByDynamiclocator] - 5
 [07-07-2025 16:33:50.903 INFO Ecom_TC07_UploadFileByDynamiclocator] - 5
 [07-07-2025 16:33:52.385 INFO Ecom_TC07_UploadFileByDynamiclocator] - 5
+[13-07-2025 13:48:34.369 INFO Ecom_TC11_AddProductInCart] - OS name = windows 10
+[13-07-2025 13:48:34.373 INFO Ecom_TC11_AddProductInCart] - Driver instance name = chromedriver: chrome on windows (291da22c4c0a6ab03756b709ce09b099)
+[13-07-2025 13:48:49.935 INFO Ecom_TC07_UploadFileByDynamiclocator] - OS name = windows 10
+[13-07-2025 13:48:49.935 INFO Ecom_TC07_UploadFileByDynamiclocator] - Driver instance name = chromedriver: chrome on windows (66313dfc8952e227bc0b43b706de69dc)
+[13-07-2025 13:48:58.976 INFO Ecom_TC09_VerifySeachProduct] - OS name = windows 10
+[13-07-2025 13:48:58.976 INFO Ecom_TC09_VerifySeachProduct] - Driver instance name = chromedriver: chrome on windows (e55c769bbbe8ef23462812693943f96b)
+[13-07-2025 13:49:10.450 INFO Ecom_TC10_VerifySubscriptionInHomePage] - OS name = windows 10
+[13-07-2025 13:49:10.450 INFO Ecom_TC10_VerifySubscriptionInHomePage] - Driver instance name = chromedriver: chrome on windows (5cdbccdbbb4d4c5b6ae3d51d0a0e3e71)

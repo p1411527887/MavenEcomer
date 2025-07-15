@@ -9,8 +9,10 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.Date;
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 public class BasePage {
     protected WebDriver driver;
@@ -248,6 +250,32 @@ public class BasePage {
             getElement(xpathLocator).click();
         }
     }
+
+    public void overrideGlobalTimeout(long timeOut) {
+        driver.manage().timeouts().implicitlyWait(timeOut, TimeUnit.SECONDS);
+    }
+
+
+    public boolean isElementUndisplayed(WebDriver driver, String XpathLocator) {
+        List<WebElement> elements = getListElement(driver ,XpathLocator );
+        System.out.println("Start time = " + new Date().toString());
+        overrideGlobalTimeout(GlobalConstants.SHORT_TIMEOUT);
+        overrideGlobalTimeout(GlobalConstants.LONG_TIMEOUT);
+
+        if (elements.size() == 0) {
+            System.out.println("Element not in DOM");
+            System.out.println("End time = " + new Date().toString());
+            return true;
+        } else if (elements.size() > 0 && !elements.get(0).isDisplayed()) {
+            System.out.println("Element in DOM but not visible/ displayed");
+            System.out.println("End time = " + new Date().toString());
+            return true;
+        } else {
+            System.out.println("Element in DOM and visible");
+            return false;
+        }
+    }
+
 
     protected boolean isElementSelected(String xpathLocator) {
         return getElement(xpathLocator).isSelected();
