@@ -1,7 +1,4 @@
-import PageObject.ContactUsPageObject;
-import PageObject.HomePageObject;
-import PageObject.LoginPageObject;
-import PageObject.ProductPageObject;
+import PageObject.*;
 import commons.BaseTest;
 import commons.GlobalConstants;
 import commons.PageGenerator;
@@ -19,6 +16,7 @@ public class Ecom_TC11_AddProductInCart extends BaseTest {
     private HomePageObject homePage;
     private ContactUsPageObject contactUsPage;
     private ProductPageObject productPage;
+    private ShoppingCartPageObject shoppingCartPage;
 
 
     @Parameters("Browser")
@@ -46,11 +44,17 @@ public class Ecom_TC11_AddProductInCart extends BaseTest {
         productPage.hoverToSleevelessDressItem();
         productPage.clickOnSleevelessDressAddToCartButton();
         productPage.clickOnViewCartLink();
-        sleepInSecond(3);
-
-
-
     }
+
+    @Test
+    public void TC_03_VerifyProductAndPriceInCart() {
+//        shoppingCartPage.bluetopItemIsDisplayed(); // verrify
+//        shoppingCartPage.sleevelessDressItemIsDisplayed();
+//        shoppingCartPage.bluetopItemPrice();
+//        shoppingCartPage.sleevelessDressItemPrice();
+    }
+
+
 
 
     @AfterClass

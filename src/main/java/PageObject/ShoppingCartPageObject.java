@@ -8,4 +8,6 @@ public class ShoppingCartPageObject extends BasePage {
         super(driver);
     }
 
+
+
 }

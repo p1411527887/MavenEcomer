@@ -101,34 +101,37 @@ public class ProductPageObject extends BasePage {
         return isElementDisplayed(ProductPageUi.LACE_TOP_FOR_WOMEN_ITEM);
     }
 
+    @Step("hover to blue top Item title")
     public void hoverToBlueTopItem() {
         waitForElementVisible(ProductPageUi.BLUE_TOP_ITEM);
         hoverToElement(ProductPageUi.BLUE_TOP_ITEM);
     }
 
+    @Step("Click on Blue top Item title")
     public void clickOnBlueTopAddToCartButton() {
         waitForElementClickable(ProductPageUi.BLUE_TOP_ADD_TO_CART_BUTTON);
-        clickToElement(ProductPageUi.BLUE_TOP_ADD_TO_CART_BUTTON);
+        clickToElementByJS(ProductPageUi.BLUE_TOP_ADD_TO_CART_BUTTON);
     }
 
-
+    @Step("click on continue shopping button")
     public void clickOnContinueShopingButton() {
         waitForElementClickable(ProductPageUi.CONTINUE_SHOPING_BUTTON);
-        clickToElement(ProductPageUi.CONTINUE_SHOPING_BUTTON);
+        clickToElementByJS(ProductPageUi.CONTINUE_SHOPING_BUTTON);
     }
 
-
+    @Step("hover to sleeveless dress for women Item title")
     public void hoverToSleevelessDressItem() {
         waitForElementVisible(ProductPageUi.SLEEVELESS_DRESS_ITEM);
         hoverToElement(ProductPageUi.SLEEVELESS_DRESS_ITEM);
     }
 
+    @Step("click on sleeveless dress add to cart button")
     public void clickOnSleevelessDressAddToCartButton() {
         waitForElementClickable(ProductPageUi.SLEEVELESS_DRESS_ADD_TO_CART_BUTTON);
-        clickToElement(ProductPageUi.SLEEVELESS_DRESS_ADD_TO_CART_BUTTON);
+        clickToElementByJS(ProductPageUi.SLEEVELESS_DRESS_ADD_TO_CART_BUTTON);
     }
 
-
+    @Step("click on view cart link")
     public ShoppingCartPageObject clickOnViewCartLink() {
         waitForElementClickable(ProductPageUi.VIEW_CART_BUTTON);
         clickToElement(ProductPageUi.VIEW_CART_BUTTON);
