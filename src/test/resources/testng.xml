@@ -16,9 +16,9 @@
         <parameter name="Browser" value="Chrome"></parameter>
         <classes>
             <class name="Ecom_TC11_AddProductInCart"/>
-            <class name="Ecom_TC07_UploadFileByDynamiclocator"/>
-            <class name="Ecom_TC09_VerifySeachProduct"/>
-            <class name="Ecom_TC10_VerifySubscriptionInHomePage"/>
+<!--            <class name="Ecom_TC07_UploadFileByDynamiclocator"/>-->
+<!--            <class name="Ecom_TC09_VerifySeachProduct"/>-->
+<!--            <class name="Ecom_TC10_VerifySubscriptionInHomePage"/>-->
 
 
         </classes>

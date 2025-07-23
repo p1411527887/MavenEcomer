@@ -60,4 +60,13 @@ public class PageGenerator {
         return new ShoppingCartPageObject(driver);
     }
 
+    public static CheckOutPageObject openCheckOutPage(WebDriver driver) {
+        return new CheckOutPageObject(driver);
+    }
+
+    public static PaymentPageObject openPaymentPage(WebDriver driver) {
+        return new PaymentPageObject(driver);
+    }
+
+
 }

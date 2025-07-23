@@ -1,7 +1,5 @@
 package commons;
 
-import java.io.File;
-
 public class GlobalConstants {
     // System Info - Lấy thông tin hệ thống
     public static final String PROJECT_PATH = System.getProperty("user.dir");
@@ -55,6 +53,12 @@ public class GlobalConstants {
     public static final String STAGING_ENVIRONMENT = "staging";
     public static final String PRODUCTION_ENVIRONMENT = "production";
 
-    //Upload picture
+    //Information Payment Card
+    public static final String NAME_ON_CARD = "Gilad Provide";
+    public static final String CARD_NUMBER = "4444333322221111";
+    public static final String CVC = "333";
+    public static final String EXPIRATION_MONTH = "07";
+    public static final String EXPIRATION_YEAR = "2028";
+
 
 }

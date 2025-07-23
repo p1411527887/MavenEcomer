@@ -108,3 +108,59 @@
 [13-07-2025 13:48:58.976 INFO Ecom_TC09_VerifySeachProduct] - Driver instance name = chromedriver: chrome on windows (e55c769bbbe8ef23462812693943f96b)
 [13-07-2025 13:49:10.450 INFO Ecom_TC10_VerifySubscriptionInHomePage] - OS name = windows 10
 [13-07-2025 13:49:10.450 INFO Ecom_TC10_VerifySubscriptionInHomePage] - Driver instance name = chromedriver: chrome on windows (5cdbccdbbb4d4c5b6ae3d51d0a0e3e71)
+[22-07-2025 09:49:53.531 INFO Ecom_TC11_AddProductInCart] - OS name = mac os x
+[22-07-2025 09:49:53.534 INFO Ecom_TC11_AddProductInCart] - Driver instance name = chromedriver: chrome on mac (3e08f1d458de197c4d14b13cf45b3f33)
+[22-07-2025 09:50:22.798 INFO Ecom_TC07_UploadFileByDynamiclocator] - OS name = mac os x
+[22-07-2025 09:50:22.799 INFO Ecom_TC07_UploadFileByDynamiclocator] - Driver instance name = chromedriver: chrome on mac (26f1c5861b7836f65f7fdfa424882133)
+[22-07-2025 09:50:33.448 INFO Ecom_TC09_VerifySeachProduct] - OS name = mac os x
+[22-07-2025 09:50:33.448 INFO Ecom_TC09_VerifySeachProduct] - Driver instance name = chromedriver: chrome on mac (cb532b13f1b1e73ac87e1c7e8087b55f)
+[22-07-2025 09:50:44.965 INFO Ecom_TC10_VerifySubscriptionInHomePage] - OS name = mac os x
+[22-07-2025 09:50:44.965 INFO Ecom_TC10_VerifySubscriptionInHomePage] - Driver instance name = chromedriver: chrome on mac (811b25c7284e7aff1fe5e6637ad7db0f)
+[22-07-2025 10:23:19.962 INFO Ecom_TC11_AddProductInCart] - OS name = mac os x
+[22-07-2025 10:23:19.965 INFO Ecom_TC11_AddProductInCart] - Driver instance name = chromedriver: chrome on mac (fbc4ac11edbca2beba34b06992787902)
+[22-07-2025 10:26:40.660 INFO Ecom_TC11_AddProductInCart] - OS name = mac os x
+[22-07-2025 10:26:40.662 INFO Ecom_TC11_AddProductInCart] - Driver instance name = chromedriver: chrome on mac (6c225a030884923e36e53224276268c9)
+[22-07-2025 10:27:44.281 INFO Ecom_TC11_AddProductInCart] - OS name = mac os x
+[22-07-2025 10:27:44.284 INFO Ecom_TC11_AddProductInCart] - Driver instance name = chromedriver: chrome on mac (0e6411f4dc657b14a9b044ddcb233c1b)
+[22-07-2025 10:28:25.990 INFO Ecom_TC11_AddProductInCart] - OS name = mac os x
+[22-07-2025 10:28:25.992 INFO Ecom_TC11_AddProductInCart] - Driver instance name = chromedriver: chrome on mac (ad15e2868d4f12f1b18067301b94c6a9)
+[22-07-2025 11:11:50.886 INFO Ecom_TC11_AddProductInCart] - OS name = mac os x
+[22-07-2025 11:11:50.888 INFO Ecom_TC11_AddProductInCart] - Driver instance name = chromedriver: chrome on mac (0ea2e29cb6c400769328565a38ac6a14)
+[22-07-2025 11:12:36.338 INFO Ecom_TC11_AddProductInCart] - OS name = mac os x
+[22-07-2025 11:12:36.341 INFO Ecom_TC11_AddProductInCart] - Driver instance name = chromedriver: chrome on mac (309319cff4623db744030c873da36880)
+[22-07-2025 11:19:43.204 INFO Ecom_TC11_AddProductInCart] - OS name = mac os x
+[22-07-2025 11:19:43.207 INFO Ecom_TC11_AddProductInCart] - Driver instance name = chromedriver: chrome on mac (808ae22bd48a91cda7144b0b115d67f1)
+[22-07-2025 11:20:16.714 INFO Ecom_TC11_AddProductInCart] - OS name = mac os x
+[22-07-2025 11:20:16.717 INFO Ecom_TC11_AddProductInCart] - Driver instance name = chromedriver: chrome on mac (88c2a8dab27ff5613d4143a5dfdbc961)
+[22-07-2025 11:21:07.076 INFO Ecom_TC11_AddProductInCart] - OS name = mac os x
+[22-07-2025 11:21:07.078 INFO Ecom_TC11_AddProductInCart] - Driver instance name = chromedriver: chrome on mac (fb945c51000e4a1568b12237329c8401)
+[22-07-2025 11:21:07.080 INFO Ecom_TC11_AddProductInCart] - no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=138.0.7204.158)
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '13.6', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [fb945c51000e4a1568b12237329c8401, deleteAllCookies {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.158, chrome: {chromedriverVersion: 138.0.7204.157 (e533e98b126..., userDataDir: /var/folders/31/htmyl7zs36g...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57260}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:57260/devtoo..., se:cdpVersion: 138.0.7204.158, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: fb945c51000e4a1568b12237329c8401
+[22-07-2025 11:21:42.789 INFO Ecom_TC11_AddProductInCart] - OS name = mac os x
+[22-07-2025 11:21:42.793 INFO Ecom_TC11_AddProductInCart] - Driver instance name = chromedriver: chrome on mac (7d66104455957b385dfd061d5a42d9c9)
+[22-07-2025 11:23:55.991 INFO Ecom_TC11_AddProductInCart] - OS name = mac os x
+[22-07-2025 11:23:55.993 INFO Ecom_TC11_AddProductInCart] - Driver instance name = chromedriver: chrome on mac (f6b685241e1dc7ae596b4821b6cf62aa)
+[22-07-2025 11:24:41.035 INFO Ecom_TC11_AddProductInCart] - OS name = mac os x
+[22-07-2025 11:24:41.038 INFO Ecom_TC11_AddProductInCart] - Driver instance name = chromedriver: chrome on mac (a23512d800403bda3658949d05f55e08)
+[22-07-2025 11:28:44.400 INFO Ecom_TC11_AddProductInCart] - OS name = mac os x
+[22-07-2025 11:28:44.406 INFO Ecom_TC11_AddProductInCart] - Driver instance name = chromedriver: chrome on mac (46f9fdf4846e2bcb3ae083e9bb9b8b58)
+[22-07-2025 11:53:03.957 INFO Ecom_TC11_AddProductInCart] - OS name = mac os x
+[22-07-2025 11:53:03.959 INFO Ecom_TC11_AddProductInCart] - Driver instance name = chromedriver: chrome on mac (85d7a712341fee50c7275ef934c1036c)
+[22-07-2025 11:53:03.961 INFO Ecom_TC11_AddProductInCart] - no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=138.0.7204.158)
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '13.6', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [85d7a712341fee50c7275ef934c1036c, deleteAllCookies {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.158, chrome: {chromedriverVersion: 138.0.7204.157 (e533e98b126..., userDataDir: /var/folders/31/htmyl7zs36g...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49906}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:49906/devtoo..., se:cdpVersion: 138.0.7204.158, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 85d7a712341fee50c7275ef934c1036c
+[22-07-2025 11:53:45.497 INFO Ecom_TC11_AddProductInCart] - OS name = mac os x
+[22-07-2025 11:53:45.500 INFO Ecom_TC11_AddProductInCart] - Driver instance name = chromedriver: chrome on mac (010af2506e8a5585a1722c0a1a0581e8)
