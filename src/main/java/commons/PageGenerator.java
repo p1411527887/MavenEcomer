@@ -1,6 +1,10 @@
 package commons;
 
 import PageObject.*;
+import PageObject.HeaderPageObject.*;
+import PageObject.ProductDeitalPage.BlueTopDetailPO;
+import PageObject.ProductDeitalPage.SleevelessDressDetailPO;
+import PageObject.SideBarPageOject.*;
 import org.openqa.selenium.WebDriver;
 
 public class PageGenerator {
@@ -68,5 +72,16 @@ public class PageGenerator {
         return new PaymentPageObject(driver);
     }
 
+    public static BlueTopDetailPO openBlueTopDetailPage(WebDriver driver) {
+        return new BlueTopDetailPO(driver);
+    }
+
+    public static SleevelessDressDetailPO openSleevelessDressDetailPage(WebDriver driver) {
+        return new SleevelessDressDetailPO(driver);
+    }
+
+    public static SignUpPageObject openSignUpPage(WebDriver driver) {
+        return new SignUpPageObject(driver);
+    }
 
 }

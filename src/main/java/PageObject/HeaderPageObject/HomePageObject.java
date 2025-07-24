@@ -1,6 +1,6 @@
-package PageObject;
+package PageObject.HeaderPageObject;
 
-import PageUI.HomePageUi;
+import PageUI.HeaderPageUI.HomePageUi;
 import commons.BasePage;
 import commons.PageGenerator;
 import io.qameta.allure.Step;
@@ -58,5 +58,11 @@ public class HomePageObject extends BasePage {
     public String subscribedSuccessMessage() {
         waitForElementVisible(HomePageUi.SUBSCRIBE_SUCCESSFULLY_MESSAGE);
         return getTextElement(HomePageUi.SUBSCRIBE_SUCCESSFULLY_MESSAGE);
+    }
+
+    public LoginPageObject clickToSignUpAndLoginLink() {
+        waitForElementClickable(HomePageUi.SIGN_UP_AND_LOGIN_LINK);
+        clickToElement(HomePageUi.SIGN_UP_AND_LOGIN_LINK);
+        return PageGenerator.openLoginPage(driver);
     }
 }

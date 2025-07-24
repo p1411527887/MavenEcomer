@@ -1,6 +1,7 @@
-package PageObject;
+package PageObject.SideBarPageOject;
 
-import PageUI.BrandOfProductPageUi;
+import PageObject.HeaderPageObject.ProductPageObject;
+import PageUI.SideBarBrandPageUI.BrandOfProductPageUi;
 import commons.PageGenerator;
 import org.openqa.selenium.WebDriver;
 
@@ -60,7 +61,7 @@ public class BrandOfProductPageObject extends ProductPageObject {
         return PageGenerator.getBibaBrandPage(driver);
     }
 
-    public BrandOfProductPageObject getBrandPageByDynamicLocator(String pageName) {
+    public BrandOfProductPageObject openBrandPageByDynamicLocator(String pageName) {
         waitForElementClickable(BrandOfProductPageUi.DYNAMIC_BRANDS_LINK, pageName);
         clickToElement(BrandOfProductPageUi.DYNAMIC_BRANDS_LINK, pageName);
         switch (pageName) {

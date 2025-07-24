@@ -1,5 +1,7 @@
 package PageObject;
 
+import PageObject.HeaderPageObject.LoginPageObject;
+import PageUI.BasePageUI;
 import PageUI.ShoppingCartPageUi;
 import commons.BasePage;
 import commons.PageGenerator;
@@ -47,5 +49,11 @@ public class ShoppingCartPageObject extends BasePage {
         waitForElementClickable(ShoppingCartPageUi.CHECK_OUT_LINK);
         clickToElement(ShoppingCartPageUi.CHECK_OUT_LINK);
         return PageGenerator.openCheckOutPage(driver);
+    }
+
+    public LoginPageObject clickToRegisterAndLoginLink() {
+        waitForElementClickable(BasePageUI.REGISTER_AND_LOGIN_LINK);
+        clickToElement(BasePageUI.REGISTER_AND_LOGIN_LINK);
+        return PageGenerator.openLoginPage(driver);
     }
 }

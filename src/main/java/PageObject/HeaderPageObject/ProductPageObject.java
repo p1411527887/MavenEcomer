@@ -1,6 +1,10 @@
-package PageObject;
+package PageObject.HeaderPageObject;
 
-import PageUI.ProductPageUi;
+import PageObject.ProductDeitalPage.BlueTopDetailPO;
+import PageObject.ProductDeitalPage.SleevelessDressDetailPO;
+import PageObject.ShoppingCartPageObject;
+import PageUI.BasePageUI;
+import PageUI.HeaderPageUI.ProductPageUi;
 import commons.BasePage;
 import commons.PageGenerator;
 import io.qameta.allure.Step;
@@ -133,8 +137,20 @@ public class ProductPageObject extends BasePage {
 
     @Step("click on view cart link")
     public ShoppingCartPageObject clickOnViewCartLink() {
-        waitForElementClickable(ProductPageUi.VIEW_CART_BUTTON);
-        clickToElement(ProductPageUi.VIEW_CART_BUTTON);
+        waitForElementClickable(BasePageUI.VIEW_CART_BUTTON);
+        clickToElement(BasePageUI.VIEW_CART_BUTTON);
         return  PageGenerator.openShoppingCartPage(driver);
+    }
+
+    public BlueTopDetailPO clickToViewBlueTopProductLink() {
+        waitForElementClickable(ProductPageUi.VIEW_PRODUCT_BLUE_TOP_LINK);
+        clickToElement(ProductPageUi.VIEW_PRODUCT_BLUE_TOP_LINK);
+        return PageGenerator.openBlueTopDetailPage(driver);
+    }
+
+    public SleevelessDressDetailPO clickToViewSleevelessDressProductLink() {
+        waitForElementClickable(ProductPageUi.VIEW_PRODUCT_SLEEVELESS_DRESS_LINK);
+        clickToElement(ProductPageUi.VIEW_PRODUCT_SLEEVELESS_DRESS_LINK);
+        return PageGenerator.openSleevelessDressDetailPage(driver);
     }
 }

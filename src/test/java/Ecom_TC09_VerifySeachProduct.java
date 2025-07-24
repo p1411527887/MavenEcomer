@@ -1,7 +1,7 @@
-import PageObject.ContactUsPageObject;
-import PageObject.HomePageObject;
-import PageObject.LoginPageObject;
-import PageObject.ProductPageObject;
+import PageObject.HeaderPageObject.ContactUsPageObject;
+import PageObject.HeaderPageObject.HomePageObject;
+import PageObject.HeaderPageObject.LoginPageObject;
+import PageObject.HeaderPageObject.ProductPageObject;
 import commons.BaseTest;
 import commons.GlobalConstants;
 import commons.PageGenerator;
@@ -29,7 +29,8 @@ public class Ecom_TC09_VerifySeachProduct extends BaseTest {
 
     @Test
     public void TC_01_VerifySeachProduct() {
-        loginPage = PageGenerator.openLoginPage(driver);
+        homePage = PageGenerator.openHomePage(driver);
+        loginPage = homePage.clickToSignUpAndLoginLink();
 
         loginPage.inputUserNameTextBox(GlobalConstants.USERNAME);
 

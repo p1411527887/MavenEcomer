@@ -1,6 +1,6 @@
-import PageObject.ContactUsPageObject;
-import PageObject.HomePageObject;
-import PageObject.LoginPageObject;
+import PageObject.HeaderPageObject.ContactUsPageObject;
+import PageObject.HeaderPageObject.HomePageObject;
+import PageObject.HeaderPageObject.LoginPageObject;
 import commons.BaseTest;
 import commons.GlobalConstants;
 import commons.PageGenerator;
@@ -28,7 +28,8 @@ public class Ecom_TC07_UploadFileByDynamiclocator extends BaseTest {
     @Test
     public void TC_02_VerifyContactUsPage() {
 
-        loginPage = PageGenerator.openLoginPage(driver);
+        homePage = PageGenerator.openHomePage(driver);
+        loginPage = homePage.clickToSignUpAndLoginLink();
 
         loginPage.inputUserNameTextBox(GlobalConstants.USERNAME);
 

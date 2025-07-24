@@ -9,10 +9,25 @@ public class GlobalConstants {
     // Admin Info - Thông tin đăng nhập admin
     public static final String USERNAME = "phat.truong@mercatus.com";
     public static final String PASSWORD = "Abcd1234";
-    public static final String NAME = "Phat";
-    public static final String EMAIL = "Phat.truong@mercatus.com";
+    public static final String NAME = "phat";
+    public static final String EMAIL = "phat.truong@mercatus.com";
     public static final String SUBJECT = "QA automation";
     public static final String YOUR_MESSAGE_HERE = "become QA automation as soon as possible";
+
+    // Admin Info - Thông tin đăng ky admin
+    public static final String SIGN_UP_BY_NAME = "phat@mercatus.com";
+    public static final String SIGN_UP_BY_EMAIL = "phat@mercatus.com";
+    public static final String SIGN_UP_BY_PASSWORD = "Abcd1234";
+    public static final String SIGN_UP_BY_FIRST_NAME = "phat";
+    public static final String SIGN_UP_BY_LAST_NAME = "truong";
+    public static final String SIGN_UP_BY_COMPANY = "Mercatus";
+    public static final String SIGN_UP_BY_ADRESSS = "90 nguyen trai";
+    public static final String SIGN_UP_BY_ADRESSS_2 = "Thanh Secret Place";
+    public static final String SIGN_UP_BY_STAGE = "NY";
+    public static final String SIGN_UP_BY_CITY = "Ramat Gan";
+    public static final String SIGN_UP_BY_ZIPCODE = "100000";
+    public static final String SIGN_UP_BY_PHONE_NUMBER = "0943318878";
+
 
     // Wait Info - Thời gian chờ
     public static final long SHORT_TIMEOUT = 5;

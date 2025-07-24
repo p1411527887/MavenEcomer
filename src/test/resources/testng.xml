@@ -8,17 +8,19 @@
         <listener class-name="reportConfigs.AllureListener"></listener>
     </listeners>
 
-    <parameter name="EcomSite" value="https://automationexercise.com/login"></parameter>
+    <parameter name="EcomSite" value="https://automationexercise.com"></parameter>
     <parameter name="BackOfficeSite" value="https://testing.qa.prod.self-point.com/backend/?domain=eliy.sites.self-point.com#!/login"></parameter>
 
     <!-- Test chạy trên Chrome -->
     <test name="Run on Chrome Browser">
         <parameter name="Browser" value="Chrome"></parameter>
         <classes>
-            <class name="Ecom_TC11_AddProductInCart"/>
+            <class name="Ecom_TC13_PlaceOrder_RegisterBeforeCheckOut"/>
+<!--            <class name="Ecom_TC06_SwitchPageByDynamicLocator"/>-->
 <!--            <class name="Ecom_TC07_UploadFileByDynamiclocator"/>-->
 <!--            <class name="Ecom_TC09_VerifySeachProduct"/>-->
 <!--            <class name="Ecom_TC10_VerifySubscriptionInHomePage"/>-->
+<!--            <class name="Ecom_TC11_AddProductInCart"/>-->
 
 
         </classes>

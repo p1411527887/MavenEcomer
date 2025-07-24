@@ -1,4 +1,7 @@
-import PageObject.*;
+import PageObject.HeaderPageObject.HomePageObject;
+import PageObject.HeaderPageObject.LoginPageObject;
+import PageObject.HeaderPageObject.ProductPageObject;
+import PageObject.SideBarPageOject.*;
 import commons.BaseTest;
 import commons.GlobalConstants;
 import commons.PageGenerator;
@@ -34,33 +37,34 @@ public class Ecom_TC06_SwitchPageByDynamicLocator extends BaseTest {
 
     @Test
     public void TC_TC06_SwitchPageByDynamicLocator() {
-        loginPage = PageGenerator.openLoginPage(driver);
+        homePage = PageGenerator.openHomePage(driver);
+        loginPage = homePage.clickToSignUpAndLoginLink();
         loginPage.inputUserNameTextBox(GlobalConstants.USERNAME);
-        loginPage.inptuPassWordTextBox(GlobalConstants.USERNAME);
+        loginPage.inptuPassWordTextBox(GlobalConstants.PASSWORD);
         homePage = loginPage.clickToLoginButton();
         Assert.assertEquals(homePage.loginSuccessTitle(), "Logged in as phat.truong@mercatus.com");
         productPage = homePage.clickToProductLink();
         brandOfProductPage = PageGenerator.getBrandOfProductPage(driver);
 
-        brandOfProductPage.getBrandPageByDynamicLocator("Polo");
+        brandOfProductPage.openBrandPageByDynamicLocator("Polo");
         brandOfProductPage = PageGenerator.getPoloBrandPage(driver);
 
-        brandOfProductPage.getBrandPageByDynamicLocator("H&M");
+        brandOfProductPage.openBrandPageByDynamicLocator("H&M");
         brandOfProductPage = PageGenerator.openHAndMBrandPage(driver);
 
-        brandOfProductPage.getBrandPageByDynamicLocator("Madame");
+        brandOfProductPage.openBrandPageByDynamicLocator("Madame");
         brandOfProductPage = PageGenerator.openMadameBrandPage(driver);
 
-        brandOfProductPage.getBrandPageByDynamicLocator("Mast & Harbour");
+        brandOfProductPage.openBrandPageByDynamicLocator("Mast & Harbour");
         brandOfProductPage = PageGenerator.openMastAndHarbourBrandPage(driver);
 
-        brandOfProductPage.getBrandPageByDynamicLocator("Babyhug");
+        brandOfProductPage.openBrandPageByDynamicLocator("Babyhug");
         brandOfProductPage = PageGenerator.openBabyHugBrandPage(driver);
 
-        brandOfProductPage.getBrandPageByDynamicLocator("Allen Solly Junior");
+        brandOfProductPage.openBrandPageByDynamicLocator("Allen Solly Junior");
         brandOfProductPage = PageGenerator.getAllenSollyJuniorBrandPage(driver);
 
-        brandOfProductPage.getBrandPageByDynamicLocator("Kookie Kids");
+        brandOfProductPage.openBrandPageByDynamicLocator("Kookie Kids");
         brandOfProductPage = PageGenerator.getKookieKidsBrandPage(driver);
 
     }

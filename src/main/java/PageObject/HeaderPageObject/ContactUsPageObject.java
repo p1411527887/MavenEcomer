@@ -1,6 +1,6 @@
-package PageObject;
+package PageObject.HeaderPageObject;
 
-import PageUI.ContactUsPageUi;
+import PageUI.HeaderPageUI.ContactUsPageUi;
 import commons.BasePage;
 import commons.PageGenerator;
 import io.qameta.allure.Step;

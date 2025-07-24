@@ -1,4 +1,4 @@
-package PageUI;
+package PageUI.HeaderPageUI;
 
 public class ProductPageUi {
     public static final String BRANDS_POLO_LINK = "//a[contains(@href, 'Polo')]";
@@ -22,5 +22,6 @@ public class ProductPageUi {
     public static final String CONTINUE_SHOPING_BUTTON = "//button[text()='Continue Shopping']";
     public static final String SLEEVELESS_DRESS_ITEM = "//p[text()='Sleeveless Dress']/parent::div[@class='productinfo text-center']";
     public static final String SLEEVELESS_DRESS_ADD_TO_CART_BUTTON = "//p[text()='Sleeveless Dress']/parent::div[@class='productinfo text-center']/a";
-    public static final String VIEW_CART_BUTTON = "//a/u[text()='View Cart']";
+    public static final String VIEW_PRODUCT_SLEEVELESS_DRESS_LINK = "//p[text()='Sleeveless Dress']/ancestor::div[@class='single-products']/following-sibling::div/descendant::a";
 }
+

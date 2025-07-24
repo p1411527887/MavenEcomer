@@ -1,4 +1,4 @@
-package PageUI;
+package PageUI.SideBarBrandPageUI;
 
 public class BrandOfProductPageUi {
     public static final String BRANDS_POLO_LINK = "//a[contains(@href, 'Polo')]";

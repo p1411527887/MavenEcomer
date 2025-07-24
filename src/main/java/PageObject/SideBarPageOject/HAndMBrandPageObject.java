@@ -1,4 +1,4 @@
-package PageObject;
+package PageObject.SideBarPageOject;
 
 import org.openqa.selenium.WebDriver;
 

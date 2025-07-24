@@ -1,4 +1,4 @@
-package PageUI;
+package PageUI.HeaderPageUI;
 
 public class ContactUsPageUi {
     public static final String NAME_TEXTBOX = "//input[@name='name']";
