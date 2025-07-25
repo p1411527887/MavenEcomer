@@ -21,6 +21,9 @@ public static final String CITY_TEXT_BOX = "//input[@id='city']";
 public static final String ZIPCODE_TEXT_BOX = "//input[@id='zipcode']";
 public static final String PHONE_NUMBER_TEXT_BOX = "//input[@id='mobile_number']";
 public static final String CREATE_ACCOUNT_BUTTON = "//button[text()='Create Account']";
+public static final String SUCCESSFULL_TEXT = "//h2[@class='title text-center']/b";
+public static final String CONTINUE_BUTTON = "//div[@class='pull-right']/a";
+
 
 
 

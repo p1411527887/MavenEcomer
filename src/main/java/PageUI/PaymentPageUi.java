@@ -7,6 +7,7 @@ public class PaymentPageUi {
     public static final String EXPIRASTION_MONTH_TEXTBOX = "//input[@name='expiry_month']";
     public static final String EXPIRASTION_YEAR_TEXTBOX = "//input[@name='expiry_year']";
     public static final String CONFIRM_ORDER_BUTTON = "//button[@id='submit']";
+    public static final String CONTINUE_BUTTON = "//div[@class='pull-right']/a";
 
 
 }

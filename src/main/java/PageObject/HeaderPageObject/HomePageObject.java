@@ -1,5 +1,6 @@
 package PageObject.HeaderPageObject;
 
+import PageObject.ShoppingCartPageObject;
 import PageUI.HeaderPageUI.HomePageUi;
 import commons.BasePage;
 import commons.PageGenerator;
@@ -64,5 +65,16 @@ public class HomePageObject extends BasePage {
         waitForElementClickable(HomePageUi.SIGN_UP_AND_LOGIN_LINK);
         clickToElement(HomePageUi.SIGN_UP_AND_LOGIN_LINK);
         return PageGenerator.openLoginPage(driver);
+    }
+
+    public ShoppingCartPageObject clickToCartLink() {
+        waitForElementClickable(HomePageUi.CART_LINK);
+        clickToElement(HomePageUi.CART_LINK);
+        return PageGenerator.openShoppingCartPage(driver);
+    }
+
+    public void clickToDeleteAccountLink() {
+        waitForElementClickable(HomePageUi.DELETE_ACCOUNT_LINK);
+        clickToElement(HomePageUi.DELETE_ACCOUNT_LINK);
     }
 }

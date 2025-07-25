@@ -1,3 +1,5 @@
+package TestCase;
+
 import PageObject.CheckOutPageObject;
 import PageObject.HeaderPageObject.*;
 import PageObject.PaymentPageObject;
@@ -14,7 +16,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 
-public class Ecom_TC13_PlaceOrder_RegisterBeforeCheckOut extends BaseTest {
+public class Ecom_TC14_PlaceOrder_RegisterWhileCheckOut extends BaseTest {
 
     private WebDriver driver;
     private LoginPageObject loginPage;
@@ -37,39 +39,16 @@ public class Ecom_TC13_PlaceOrder_RegisterBeforeCheckOut extends BaseTest {
     }
 
     @Test
-    public void Step_01_ViewDetailProduct() {
+    public void Step_01_SignUp() {
         homePage = PageGenerator.openHomePage(driver);
-        productPage = homePage.clickToProductLink();
-        blueTopDetailPage =  productPage.clickToViewBlueTopProductLink();
-        verifyEquals(blueTopDetailPage.getNameOfProduct(),"Blue Top");
-        verifyEquals(blueTopDetailPage.getCategoryOfProduct(),"Category: Women > Tops");
-        verifyEquals(blueTopDetailPage.getPriceOfProduct(),"Rs. 500");
-        verifyEquals(blueTopDetailPage.getAvabilityOfProduct(),"Availability: In Stock");
-        verifyEquals(blueTopDetailPage.getConditionOfProduct(),"Condition: New");
-        verifyEquals(blueTopDetailPage.getBrandOfProduct(),"Brand: Polo");
-    }
-
-    @Test
-    public void Step_02_AddproductToCart() {
-        blueTopDetailPage.increasedProduct("4");
-        blueTopDetailPage.clickToAddToCartButton();
-        shoppingCartPage = blueTopDetailPage.clickToViewCartLink();
-    }
-
-    @Test
-    public void Step_03_VerifyProductAndPriceInShoppingCart() {
-        verifyEquals(shoppingCartPage.bluetopItemName(),"Blue Top");
-        verifyEquals(shoppingCartPage.bluetopItemPrice(),"Rs. 500");
-        verifyEquals(shoppingCartPage.bluetopItemQuantity(),"4");
-        shoppingCartPage.clickToProceedToCheckOutButton();
-        loginPage = shoppingCartPage.clickToRegisterAndLoginLink();
+        loginPage = homePage.clickToSignUpAndLoginLink();
         loginPage.inputSignUpName(GlobalConstants.SIGN_UP_BY_NAME);
         loginPage.inputSignUpMailAdress(GlobalConstants.SIGN_UP_BY_EMAIL);
         signUpPage = loginPage.clickToSignUpButton();
     }
 
     @Test
-    public void Step_04_SignUp() {
+    public void Step_02_FillFullInformation() {
         signUpPage.clickToMrRadioCheckBox();
         verifyEquals(signUpPage.geSignUptName(),"phat@mercatus.com");
         verifyEquals(signUpPage.getSignUpEmail(),"phat@mercatus.com");
@@ -91,42 +70,63 @@ public class Ecom_TC13_PlaceOrder_RegisterBeforeCheckOut extends BaseTest {
         signUpPage.inputZipCodeTextBox(GlobalConstants.SIGN_UP_BY_ZIPCODE);
         signUpPage.inputPhoneNumberTextBox(GlobalConstants.SIGN_UP_BY_PHONE_NUMBER);
         signUpPage.clickToCreateAccountButton();
-        sleepInSecond(5);
+        homePage = signUpPage.clickToContinueButton();
+        verifyEquals(homePage.loginSuccessTitle(), "Logged in as phat@mercatus.com");
+    }
 
+    @Test
+    public void Step_03_AddProductToCart() {
+        productPage = homePage.clickToProductLink();
+        productPage.hoverToBlueTopItem();
+        productPage.clickOnBlueTopAddToCartButton();
+        productPage.clickOnContinueShopingButton();
+        productPage.hoverToSleevelessDressItem();
+        productPage.clickOnSleevelessDressAddToCartButton();
+        shoppingCartPage = productPage.clickOnViewCartLink();
+    }
 
-
-
-
-
+    @Test
+    public void Step_04_VerifyProductAndPriceInShoppingCart() {
+        verifyEquals(shoppingCartPage.bluetopItemName(),"Blue Top");
+        verifyEquals(shoppingCartPage.sleevelessDressItemName(),"Sleeveless Dress");
+        verifyEquals(shoppingCartPage.bluetopItemPrice(),"Rs. 500");
+        verifyEquals(shoppingCartPage.sleevelessDressItemPrice(),"Rs. 1000");
+        verifyEquals(shoppingCartPage.bluetopItemQuantity(),"1");
+        verifyEquals(shoppingCartPage.sleevelessDressQuantity(),"1");
+        checkOutPage = shoppingCartPage.clickToProceedToCheckOutButton();
 
     }
 
     @Test
-    public void Step_05_AddAndIncreasedSleevelessDressProductToCart() {
+    public void Step_05_VerifyProductAndPriceInCheckOutPage() {
+        verifyEquals(checkOutPage.deliveryCustomerName(),"Mr. phat truong");
+        verifyEquals(checkOutPage.deliveryCompanyName(),"Mercatus");
+        verifyEquals(checkOutPage.deliveryAdress(),"90 nguyen trai");
+        verifyEquals(checkOutPage.deliveryAdress2(),"Thanh Secret Place");
+        verifyEquals(checkOutPage.deliveryCity(),"Ramat Gan NY 100000");
+        verifyEquals(checkOutPage.deliveryCountry(),"United States");
+        verifyEquals(checkOutPage.deliveryPhoneNumber(),"0943318878");
+        paymentPage = checkOutPage.clickToPlaceOrderButton();
 
     }
 
     @Test
-    public void Step_06_VerifyProductAndPriceInShoppingCart() {
+    public void Step_06_InputInformationPayment() {
+        paymentPage.inputNameOnCart(GlobalConstants.NAME_ON_CARD);
+        paymentPage.inputCardNumber(GlobalConstants.CARD_NUMBER);
+        paymentPage.inputCVCNumber(GlobalConstants.CVC);
+        paymentPage.inputExpirationMonthNumber(GlobalConstants.EXPIRATION_MONTH);
+        paymentPage.inputExpirationYearNumber(GlobalConstants.EXPIRATION_YEAR);
+        paymentPage.clickToPayAndConfirmOrderButton();
+        homePage = paymentPage.clickToContinueButton();
+        homePage.clickToDeleteAccountLink();
 
     }
-    @Test
-    public void Step_07_VerifyProductAndPriceInCheckOutPage() {
-
-    }
-
-//    @Test
-//    public void Step_08_InputInformationPayment() {
-//        loginPage.itputNameToSignUpByNameTextBox();
-//        loginPage.inputEmailToSignUpByEmailTextBox();
-//        signUpPage = loginPage.clickToSignUpButton();
-//
-//    }
 
 
 
-//    @AfterClass(alwaysRun = true)
-//    public void CloseWindow() {
-//        closeBrowserDriver();
-//    }
+    @AfterClass(alwaysRun = true)
+    public void CloseWindow() {
+      closeBrowserDriver();
+   }
 }

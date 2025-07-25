@@ -10,6 +10,8 @@ public class HomePageUi {
     public static final String SUBSCRIPTION_ARROW_BUTTON = "//button[@id='subscribe']";
     public static final String SUBSCRIBE_SUCCESSFULLY_MESSAGE = "//div[@class='alert-success alert']";
     public static final String SIGN_UP_AND_LOGIN_LINK = "//a[text()=' Signup / Login']";
+    public static final String CART_LINK = "//a[text()=' Cart']";
+    public static final String DELETE_ACCOUNT_LINK = "//a[text()=' Delete Account']";
 
 
 }

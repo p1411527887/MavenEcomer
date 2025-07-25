@@ -14,17 +14,34 @@
     <!-- Test chạy trên Chrome -->
     <test name="Run on Chrome Browser">
         <parameter name="Browser" value="Chrome"></parameter>
-        <classes>
-            <class name="Ecom_TC13_PlaceOrder_RegisterBeforeCheckOut"/>
-<!--            <class name="Ecom_TC06_SwitchPageByDynamicLocator"/>-->
-<!--            <class name="Ecom_TC07_UploadFileByDynamiclocator"/>-->
-<!--            <class name="Ecom_TC09_VerifySeachProduct"/>-->
-<!--            <class name="Ecom_TC10_VerifySubscriptionInHomePage"/>-->
-<!--            <class name="Ecom_TC11_AddProductInCart"/>-->
+<!--        <classes>-->
+<!--            <class name="TestCase.Ecom_TC15_PlaceOrder_LoginBeforeCheckOut"/>-->
+<!--&lt;!&ndash;            <class name="TestCase.Ecom_TC06_SwitchPageByDynamicLocator"/>&ndash;&gt;-->
+<!--&lt;!&ndash;            <class name="TestCase.Ecom_TC07_UploadFileByDynamiclocator"/>&ndash;&gt;-->
+<!--&lt;!&ndash;            <class name="TestCase.Ecom_TC09_VerifySeachProduct"/>&ndash;&gt;-->
+<!--&lt;!&ndash;            <class name="TestCase.Ecom_TC10_VerifySubscriptionInHomePage"/>&ndash;&gt;-->
+<!--&lt;!&ndash;            <class name="TestCase.Ecom_TC11_AddProductInCart"/>&ndash;&gt;-->
 
 
-        </classes>
+<!--        </classes>-->
+<!--        <packages>-->
+<!--            <package name="TestCase"/>-->
+<!--        </packages>-->
     </test>
+
+    <test name="Run on FireFox Browser">
+        <parameter name="Browser" value="FireFox"></parameter>
+                <classes>
+                    <class name="TestCase.Ecom_TC15_PlaceOrder_LoginBeforeCheckOut"/>
+
+
+
+                </classes>
+<!--        <packages>-->
+<!--            <package name="TestCase"/>-->
+<!--        </packages>-->
+    </test>
+
 
 
 

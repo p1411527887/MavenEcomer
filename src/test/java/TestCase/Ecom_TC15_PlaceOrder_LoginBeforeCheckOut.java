@@ -1,8 +1,11 @@
-import PageObject.*;
-import PageObject.HeaderPageObject.ContactUsPageObject;
-import PageObject.HeaderPageObject.HomePageObject;
-import PageObject.HeaderPageObject.LoginPageObject;
-import PageObject.HeaderPageObject.ProductPageObject;
+package TestCase;
+
+import PageObject.CheckOutPageObject;
+import PageObject.HeaderPageObject.*;
+import PageObject.PaymentPageObject;
+import PageObject.ProductDeitalPage.BlueTopDetailPO;
+import PageObject.ProductDeitalPage.SleevelessDressDetailPO;
+import PageObject.ShoppingCartPageObject;
 import commons.BaseTest;
 import commons.GlobalConstants;
 import commons.PageGenerator;
@@ -13,7 +16,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 
-public class Ecom_TC11_AddProductInCart extends BaseTest {
+public class Ecom_TC15_PlaceOrder_LoginBeforeCheckOut extends BaseTest {
 
     private WebDriver driver;
     private LoginPageObject loginPage;
@@ -23,6 +26,10 @@ public class Ecom_TC11_AddProductInCart extends BaseTest {
     private ShoppingCartPageObject shoppingCartPage;
     private CheckOutPageObject checkOutPage;
     private PaymentPageObject paymentPage;
+    private BlueTopDetailPO blueTopDetailPage;
+    private SleevelessDressDetailPO sleevelessDressDetailPage;
+    private SignUpPageObject signUpPage;
+
 
 
     @Parameters("Browser")
@@ -32,14 +39,14 @@ public class Ecom_TC11_AddProductInCart extends BaseTest {
     }
 
     @Test
-    public void Step_01_LoginToHomePage() {
+    public void Step_01_Login() {
+        homePage = PageGenerator.openHomePage(driver);
         homePage = PageGenerator.openHomePage(driver);
         loginPage = homePage.clickToSignUpAndLoginLink();
         loginPage.inputUserNameTextBox(GlobalConstants.USERNAME);
         loginPage.inptuPassWordTextBox(GlobalConstants.PASSWORD);
         homePage = loginPage.clickToLoginButton();
         verifyEquals(homePage.loginSuccessTitle(), "Logged in as phat.truong@mercatus.com");
-
     }
 
     @Test
@@ -62,8 +69,6 @@ public class Ecom_TC11_AddProductInCart extends BaseTest {
         verifyEquals(shoppingCartPage.bluetopItemQuantity(),"1");
         verifyEquals(shoppingCartPage.sleevelessDressQuantity(),"1");
         checkOutPage = shoppingCartPage.clickToProceedToCheckOutButton();
-
-
     }
 
     @Test
@@ -90,8 +95,9 @@ public class Ecom_TC11_AddProductInCart extends BaseTest {
 
 
 
+
     @AfterClass(alwaysRun = true)
     public void CloseWindow() {
-        closeBrowserDriver();
-    }
+      closeBrowserDriver();
+   }
 }

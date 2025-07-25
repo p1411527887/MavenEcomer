@@ -144,7 +144,7 @@ public class ProductPageObject extends BasePage {
 
     public BlueTopDetailPO clickToViewBlueTopProductLink() {
         waitForElementClickable(ProductPageUi.VIEW_PRODUCT_BLUE_TOP_LINK);
-        clickToElement(ProductPageUi.VIEW_PRODUCT_BLUE_TOP_LINK);
+        clickToElementByJS(ProductPageUi.VIEW_PRODUCT_BLUE_TOP_LINK);
         return PageGenerator.openBlueTopDetailPage(driver);
     }
 

@@ -1,5 +1,6 @@
 package PageObject;
 
+import PageObject.HeaderPageObject.HomePageObject;
 import PageUI.PaymentPageUi;
 import PageUI.ShoppingCartPageUi;
 import commons.BasePage;
@@ -40,5 +41,12 @@ public class PaymentPageObject extends BasePage {
     public void clickToPayAndConfirmOrderButton() {
         waitForElementClickable(PaymentPageUi.CONFIRM_ORDER_BUTTON);
         clickToElement(PaymentPageUi.CONFIRM_ORDER_BUTTON);
+    }
+
+
+    public HomePageObject clickToContinueButton() {
+        waitForElementClickable(PaymentPageUi.CONTINUE_BUTTON);
+        clickToElement(PaymentPageUi.CONTINUE_BUTTON);
+        return PageGenerator.openHomePage(driver);
     }
 }

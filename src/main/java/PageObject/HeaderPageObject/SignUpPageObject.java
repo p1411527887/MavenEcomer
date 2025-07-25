@@ -2,6 +2,7 @@ package PageObject.HeaderPageObject;
 
 import PageUI.HeaderPageUI.SignUpPageUi;
 import commons.BasePage;
+import commons.PageGenerator;
 import org.openqa.selenium.WebDriver;
 
 
@@ -112,5 +113,16 @@ public class SignUpPageObject extends BasePage {
     public void inputToCityTextBox(String city) {
         waitForElementClickable(SignUpPageUi.CITY_TEXT_BOX);
         sendkeyToElement(SignUpPageUi.CITY_TEXT_BOX, city);
+    }
+
+    public String createAccountSuccessfullyMessage() {
+        waitForElementInvisible(SignUpPageUi.SUCCESSFULL_TEXT);
+        return getTextElement(SignUpPageUi.SUCCESSFULL_TEXT);
+    }
+
+    public HomePageObject clickToContinueButton() {
+        waitForElementClickable(SignUpPageUi.CONTINUE_BUTTON);
+        clickToElement(SignUpPageUi.CONTINUE_BUTTON);
+        return PageGenerator.openHomePage(driver);
     }
 }
